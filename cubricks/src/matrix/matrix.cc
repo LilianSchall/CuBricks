@@ -31,7 +31,6 @@ Matrix& Matrix::operator=(Matrix& other)
 
 Matrix::Matrix(const Matrix& m)
 {
-    std::cout << "Matrix copy by reference\n";
     this->width = m.width;
     this->height = m.height;
     this->data = m.data;
@@ -42,7 +41,6 @@ Matrix::~Matrix()
     if (this->_dataCopied)
         return;
 
-    std::cout << "Deleting matrix with data: " << this->data[0] << "\n";
     delete this->data;
 }
 
